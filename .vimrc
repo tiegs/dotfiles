@@ -10,6 +10,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " --- Plugins
+Plugin 'tpope/vim-sensible'
 Plugin 'vim-airline/vim-airline'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'junegunn/vim-easy-align'
@@ -17,6 +18,7 @@ Plugin 'preservim/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
 Plugin 'ryanoasis/vim-devicons'
 
 call vundle#end()
@@ -45,6 +47,12 @@ nnoremap <silent> <Leader>v :NERDTreeFind<CR>
 
 " git fugitive
 nnoremap <leader>g :Git<CR>
+
+" switch buffer
+nnoremap <Leader>b :buffers<CR>:buffer<Space>
+
+" switch relative/absolute numbers
+nnoremap <Leader>r :set relativenumber!<CR>
 
 " --- Plugin Settings
 
@@ -82,14 +90,24 @@ let g:airline#extensions#tabline#enabled = 1
 
 
 " --- Settings
-set shell=/bin/bash
+set shell=/bin/bash  " Make sure to use bash
 syntax on
-set number
 set noswapfile
 set hlsearch 
 set ignorecase
-set incsearch
+"set incsearch " Not needed -> vim-sensible
 set showmatch
+
+" Setting number and relativenumber enables hybrid number
+set number
+"set relativenumber
+
+" Enable relative linenumbers automatically
+:augroup numbertoggle
+:  autocmd!
+:  autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu && mode() != "i" | set rnu   | endif
+:  autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu                  | set nornu | endif
+:augroup END
 
 " Always display signcolumn
 set signcolumn=yes
