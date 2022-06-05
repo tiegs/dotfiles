@@ -1,5 +1,7 @@
 " --- Set up vundle
 " Requires vundle to be installed
+
+" Disable autoindent for vundle to work properly
 set nocompatible
 filetype off 
 
@@ -20,8 +22,14 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'ryanoasis/vim-devicons'
+"Plugin 'nvim-telescope/telescope' " Only nvim?
+
+" Language-specific plugins
+Plugin 'fatih/vim-go'
 
 call vundle#end()
+
+" re-enable autoindent
 filetype plugin indent on
 " --- Vundle done
 
