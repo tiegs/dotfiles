@@ -7,6 +7,7 @@ filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
 
+" Vundle stores Plugins in ~/.vim/bundle
 call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
