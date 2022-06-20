@@ -8,9 +8,7 @@ call plug#begin()
 
 Plug 'tpope/vim-sensible'      " Sensible defaults
 
-" Visuals
-Plug 'ryanoasis/vim-devicons'
-
+" Themes
 Plug 'rmehri01/onenord.nvim', { 'branch': 'main' }
 Plug 'arcticicestudio/nord-vim'
 Plug 'drewtempelmeyer/palenight.vim'
@@ -18,18 +16,17 @@ Plug 'embark-theme/vim', { 'as': 'embark', 'branch': 'main' }
 Plug 'sainnhe/everforest'
 Plug 'sainnhe/edge'
 Plug 'rakr/vim-one'
-Plug 'altercation/vim-colors-solarized'
-
+Plug 'morhetz/gruvbox'
 
 
 Plug 'nvim-lualine/lualine.nvim'
-Plug 'kyazdani42/nvim-web-devicons'  " Lua version of vim-devicons
 
 Plug 'easymotion/vim-easymotion'  " Jump to highlight by char
 
 " NerdTree
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'ryanoasis/vim-devicons'
 Plug 'preservim/nerdcommenter'
 
 " General Functionality
@@ -39,7 +36,6 @@ Plug 'airblade/vim-gitgutter'  " Git Plugin
 Plug 'tpope/vim-surround'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-
 
 " Coding related
 Plug 'neoclide/coc.nvim', {'branch': 'release'}  " Code completition
@@ -70,21 +66,29 @@ if (empty($TMUX))
   endif
 endif
 
-"set termguicolors
-
 set background=dark
-let g:solarized_termcolors=256
 
 "colorscheme onenord
-"colorscheme nord
+colorscheme nord
 "colorscheme palenight
 "colorscheme embark
-colorscheme solarized
+"colorscheme everforest
+"colorscheme edge
+"colorscheme one
+"colorscheme gruvbox
 
 " Statusline (lualine)
 lua << END
 require('lualine').setup()
 END
+
+let g:NERDTreeGitStatusUseNerdFonts = 1
+
+" Hide brackets in GitStatus
+let g:NERDTreeGitStatusConcealBrackets = 1 " default: 0
+
+" Force extra padding in NERDTree so that the filetype icons line up vertically
+"let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
 
 set wildmode=longest,list,full
 
