@@ -32,10 +32,12 @@ Plug 'preservim/nerdcommenter'
 " General Functionality
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " Better syntax highliting
 Plug 'RRethy/vim-illuminate'  " Highlight other occurences
-Plug 'airblade/vim-gitgutter'  " Git Plugin
+Plug 'tpope/vim-fugitive'  " Git Plugin
+Plug 'airblade/vim-gitgutter'  " Git sign column
 Plug 'tpope/vim-surround'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'vim-syntastic/syntastic'
 
 " Coding related
 Plug 'neoclide/coc.nvim', {'branch': 'release'}  " Code completition
@@ -144,6 +146,17 @@ for _, lsp in pairs(servers) do
   }
 end
 END
+
+" --- Syntastic config
+" https://github.com/vim-syntastic/syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 " --- CoC Config
 " https://github.com/neoclide/coc.nvim
@@ -314,8 +327,10 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
  nnoremap <Leader>b :buffers<CR>:buffer<Space>
 
 " switch relative/absolute numbers
- nnoremap <Leader>r :set relativenumber!<CR>
+ nnoremap <Leader>n :set relativenumber!<CR>
 
+" switch relative/absolute numbers
+ nnoremap <Leader>N :set norelativenumber!<CR>:set nonumber!<CR>
 
 
 " Split pane settings
@@ -369,7 +384,8 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 " Search settings
 set showmatch     " Show matching parenthesis
-set ignorecase    " case-insensitive search
+"set ignorecase    " case-insensitive search
+set smartcase     " Search case-insensitive, exept when search term contains uppercase chars
 
 "set cc=80         " line at 80 char
 set cursorline    " Highlight current line
