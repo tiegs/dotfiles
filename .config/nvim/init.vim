@@ -21,7 +21,11 @@ Plug 'morhetz/gruvbox'
 
 Plug 'nvim-lualine/lualine.nvim'
 
-Plug 'easymotion/vim-easymotion'  " Jump to highlight by char
+" Jump to highlight by char
+Plug 'easymotion/vim-easymotion'
+
+" Allows integration between tmux and vim panes/splits
+Plug 'christoomey/vim-tmux-navigator'
 
 " NerdTree
 Plug 'preservim/nerdtree'
