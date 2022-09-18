@@ -4,10 +4,10 @@ if status is-interactive
 
     # Check if tmux is already running
     if test -z $TMUX
-      /usr/bin/neofetch
-    else
       # If not start tmux
-      test -z $TMUX; and exec tmux
+      exec tmux
+    else
+      /usr/bin/neofetch
     end
 
     #test -n $TMUX; and exec neofetch
