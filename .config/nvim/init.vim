@@ -42,6 +42,7 @@ Plug 'tpope/vim-surround'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'vim-syntastic/syntastic'
+Plug 'simeji/winresizer'
 
 " Coding related
 Plug 'neoclide/coc.nvim', {'branch': 'release'}  " Code completition
@@ -77,8 +78,8 @@ set background=dark
 "colorscheme onenord
 colorscheme nord
 "colorscheme palenight
-"colorscheme embark
 "colorscheme everforest
+"colorscheme embark
 "colorscheme edge
 "colorscheme one
 "colorscheme gruvbox
@@ -355,9 +356,18 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 
+
 " --- Language specific key bindings
 " go
  au FileType go nmap <leader>r :GoRun % <CR>
+
+" --- Language specific settings
+
+" Enable vertical cursor line for yaml and python
+autocmd FileType yaml set cursorcolumn
+autocmd FileType yml set cursorcolumn
+
+autocmd FileType python set cursorcolumn
 
 
 
@@ -415,8 +425,9 @@ set number
 "else
 "  set signcolumn=yes
 "endif
+
 " Always show the signcolumn, otherwise it would shift the text each time
- set signcolumn=yes
+set signcolumn=yes
 
 highlight! link SignColumn LineNr
 
