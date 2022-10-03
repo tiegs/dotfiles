@@ -339,6 +339,9 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 " git fugitive
  nnoremap <leader>g :Git<CR>
 
+" FZF
+ nnoremap <leader>f :FZF<CR>
+
 " switch buffer
  nnoremap <Leader>b :buffers<CR>:buffer<Space>
 
@@ -409,8 +412,12 @@ autocmd FileType python set cursorcolumn
 
 " Search settings
 set showmatch     " Show matching parenthesis
-"set ignorecase    " case-insensitive search
+set ignorecase    " case-insensitive search
 set smartcase     " Search case-insensitive, exept when search term contains uppercase chars
+
+" Clear search buffer
+" https://vimdoc.sourceforge.net/htmldoc/pattern.html#last-pattern
+nnoremap <silent> <leader>l :let @/ = ""<CR>
 
 "set cc=80         " line at 80 char
 set cursorline    " Highlight current line
