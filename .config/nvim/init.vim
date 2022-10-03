@@ -55,6 +55,9 @@ Plug 'neovim/nvim-lspconfig'
 " Go
 Plug 'fatih/vim-go', { 'for': 'go' }
 
+" Terraform
+Plug 'hashivim/vim-terraform', { 'for': 'tf' }
+
 call plug#end()
 
 
