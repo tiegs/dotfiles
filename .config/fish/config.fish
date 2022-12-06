@@ -7,6 +7,7 @@ if status is-interactive
     else if test -z "$TMUX"
       # Start tmux if not alreay in tmux
       exec tmux
+      #/usr/bin/neofetch
     else
       # Runs _inside_ each tmux session
       /usr/bin/neofetch
