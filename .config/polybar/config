@@ -107,10 +107,11 @@ border-size = 0
 ;border-right-size = 25
 ;border-top-size = 0
 ;border-bottom-size = 25
+;border-bottom-size = 25
 border-color = #000000
 
-padding-left = 1
-padding-right = 1
+padding-left = 5
+padding-right = 5
 
 module-margin-left = 3
 module-margin-right = 3
@@ -123,7 +124,7 @@ font-3 = "Noto Sans Mono:size=10;0"
 
 modules-left = i3 xwindow
 modules-center = kernel
-modules-right = memory2 cpu2 date
+modules-right = aur-updates memory2 cpu2 date
 
 separator = |
 

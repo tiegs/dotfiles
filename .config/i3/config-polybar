@@ -23,15 +23,10 @@ set $mod Mod4
 
 # This is setup for qwerty
 # set $right to m if using azerty keyboard
-set $left h
-set $down j
-set $up k
-set $right l
-
-#set $up l
-#set $down k
-#set $left j
-#set $right semicolon
+set $up l
+set $down k
+set $left j
+set $right colon
 
 ################# Single and Dual screen
 
@@ -51,17 +46,14 @@ exec --no-startup-id autorandr -c
 
 # triple-head setup
 set $firstMonitor DiplayPort-4
-set $secondMonitor DiplayPort-1
-set $thirdMonitor DiplayPort-3
-#set $firstMonitor DiplayPort-4
-#set $secondMonitor DiplayPort-3
-#set $thirdMonitor DiplayPort-1
+set $secondMonitor DiplayPort-3
+set $thirdMonitor DiplayPort-1
 set $internalMonitor eDP
 
 workspace 1 output $firstMonitor
 workspace 2 output $secondMonitor
 workspace 3 output $thirdMonitor
-#workspace 4 output $secondMonitor
+workspace 4 output $internalMonitor 
 #workspace 5 output $secondMonitor
 #workspace 6 output $secondMonitor
 #workspace 7 output $thirdMonitor
@@ -205,7 +197,7 @@ for_window [urgent=latest] focus
 default_orientation horizontal
 
 # split in horizontal orientation
-bindsym $mod+i split h
+bindsym $mod+h split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -449,7 +441,7 @@ bindsym control+mod1+a exec --no-startup-id xfce4-appfinder
 
 # pamac-manager
 bindsym control+mod1+p exec --no-startup-id pamac-manager
-#
+
 # xkill
 bindsym --release $mod+Escape exec xkill
 
@@ -607,10 +599,8 @@ bindsym XF86AudioStop exec --no-startup-id playerctl stop
 
 ################# xbacklight                       
 
-#bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 20 # increase screen brightness
-bindsym XF86MonBrightnessUp exec light -A 5 # increase screen brightness
-#bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 20 # decrease screen brightness
-bindsym XF86MonBrightnessDown exec light -U 5 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 20 # increase screen brightness
+bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 20 # decrease screen brightness
 
 ################# bar toggle                       
 
@@ -621,7 +611,7 @@ bindsym $mod+shift+b bar mode toggle
 
 # Border control
 hide_edge_borders both
-#bindsym $mod+shift+b exec --no-startup-id i3-msg border toggle
+bindsym $mod+shift+b exec --no-startup-id i3-msg border toggle
 
 # changing border style
 # super+t in arcolinux is starting terminal
@@ -652,8 +642,8 @@ popup_during_fullscreen smart
 for_window [class="^.*"] border pixel 2
 gaps inner 5
 gaps outer 5
-smart_gaps on
-smart_borders on
+# smart_gaps on
+# smart_borders on
 
 ################# i3 gaps change                   
 
