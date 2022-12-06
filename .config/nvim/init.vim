@@ -27,6 +27,8 @@ Plug 'nvim-lualine/lualine.nvim'
 " Jump to highlight by char
 Plug 'easymotion/vim-easymotion'
 
+Plug 'ggandor/leap.nvim'
+
 " Allows integration between tmux and vim panes/splits
 Plug 'christoomey/vim-tmux-navigator'
 
@@ -50,15 +52,22 @@ Plug 'simeji/winresizer'
 " Coding related
 Plug 'neoclide/coc.nvim', {'branch': 'release'}  " Code completition
 Plug 'neovim/nvim-lspconfig'
+Plug 'mileszs/ack.vim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
 
 " Language specific plugins
 " Go
 Plug 'fatih/vim-go', { 'for': 'go' }
 
+" Python
+Plug 'vim-scripts/indentpython.vim'
+
 " Terraform
 Plug 'hashivim/vim-terraform', { 'for': 'tf' }
 
 call plug#end()
+
 
 
 " Visuals
@@ -102,6 +111,12 @@ set background=dark
 lua << END
 require('lualine').setup()
 END
+
+" leap configuration
+lua << END
+require('leap').set_default_keymaps()
+END
+
 
 let g:NERDTreeGitStatusUseNerdFonts = 1
 
@@ -176,6 +191,9 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+" Disable syntastic
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
 
 " --- CoC Config
 " https://github.com/neoclide/coc.nvim
@@ -421,6 +439,9 @@ set smartcase     " Search case-insensitive, exept when search term contains upp
 " Clear search buffer
 " https://vimdoc.sourceforge.net/htmldoc/pattern.html#last-pattern
 nnoremap <silent> <leader>l :let @/ = ""<CR>
+
+" ack.vim bindig
+nnoremap <leader>s :Ack!<Space>
 
 "set cc=80         " line at 80 char
 set cursorline    " Highlight current line
