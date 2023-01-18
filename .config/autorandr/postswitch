@@ -1,5 +1,0 @@
-#!/bin/bash
-
-# Update polybar
-
-~/.config/polybar/launch.sh
