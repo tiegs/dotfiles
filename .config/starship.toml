@@ -16,6 +16,9 @@ style = "blue bold"
 [memory_usage]
 disabled = false
 
+[terraform]
+symbol = " "
+
 [time]
 disabled = false
 format = '[$time]($style)'
