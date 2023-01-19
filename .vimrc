@@ -12,21 +12,28 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-" --- Plugins
+""" --- Plugins
 Plugin 'tpope/vim-sensible'
 Plugin 'vim-airline/vim-airline'
-Plugin 'easymotion/vim-easymotion'
-Plugin 'junegunn/vim-easy-align'
+Plugin 'vim-airline/vim-airline-themes'
+"Plugin 'itchyny/lightline.vim'
+"Plugin 'easymotion/vim-easymotion'
+"Plugin 'junegunn/vim-easy-align'
 Plugin 'preservim/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'ryanoasis/vim-devicons'
+Plugin 'preservim/nerdcommenter'
 "Plugin 'nvim-telescope/telescope' " Only nvim?
 
+" Themes
+"Plugin 'catppuccin/vim', {'name': 'catppuccin'}
+Plugin 'tiegs/catppuccin-vim', {'name': 'catppuccin'}
+
 " Language-specific plugins
-Plugin 'fatih/vim-go'
+"Plugin 'fatih/vim-go'
 
 call vundle#end()
 
@@ -39,13 +46,23 @@ let mapleader = " "
 
 set encoding=UTF-8
 
+" Ignore terminal color scheme (required for themes to work properly)
+set termguicolors
+
+" Enable colorscheme
+colorscheme catppuccin_mocha
+"let g:lightline = {'colorscheme': 'catppuccin_mocha'}
+"let g:airline_theme = 'catppuccin_mocha'
+
+" Disable default statusline (since we use airline/lightline)
+set noshowmode
 
 " --- Keybindings
 " Start interactive EasyAlign in visual mode (e.g. vipga)
-xmap ga <Plug>(EasyAlign)
+"xmap ga <Plug>(EasyAlign)
 
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
-nmap ga <Plug>(EasyAlign)
+"nmap ga <Plug>(EasyAlign)
 
 " Toggle NerdTree
 "noremap <silent> <leader>t :NERDTreeToggle<CR>
@@ -95,7 +112,7 @@ set updatetime=100
 let g:airline_powerline_fonts = 1
 
 " Automatically display all buffers when there's only one tab open.
-let g:airline#extensions#tabline#enabled = 1
+"let g:airline#extensions#tabline#enabled = 1
 
 
 " --- Settings
@@ -128,3 +145,9 @@ set listchars=tab:›\ ,trail:•,extends:#,nbsp:. " Highlight problematic white
 
 filetype plugin indent on
 
+
+" Keep original background
+highlight Normal guibg=NONE ctermbg=NONE
+
+" Workaround for https://github.com/ryanoasis/vim-devicons/issues/266
+set t_RV=
