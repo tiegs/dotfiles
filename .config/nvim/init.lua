@@ -5,6 +5,8 @@ require('keybindings')
 -- Themes --
 ------------
 
+vim.opt.termguicolors = true
+
 -- Catppuccin setup
 require("catppuccin").setup({
   flavour = "mocha",
@@ -12,10 +14,28 @@ require("catppuccin").setup({
 })
 
 -- Lualine setup
-require('lualine').setup()
+require('lualine').setup({
+})
 
 -- Tabline setup
-require('tabline').setup()
+require('tabline').setup({
+  enable = true,
+  options = {
+    component_separators = { '', '' },
+    section_separators = { '', '' },
+    max_bufferline_percent = 66,
+    show_tabs_always = true,
+    show_devicons = true,
+    colored = true,
+    tabline_show_last_separator = true,
+    show_filename_only = true,
+    modified_icon = "+ ",
+    modified_italic = true,
+    show_tabs_only = false,
+  }
+})
+
+require('colorizer').setup()
 
 
 vim.cmd.colorscheme "catppuccin"
@@ -36,6 +56,7 @@ vim.g.NERDTreeQuitOnOpen = 1
 -- Enable cursorline
 vim.opt.cursorline = true
 -- vim.opt.cursorcolumn = true
+-- vim.opt.colorcolumn = "80"
 
 -- Show matching parenthesis
 vim.opt.showmatch = true
@@ -47,6 +68,8 @@ vim.opt.smartcase = true
 ------------------------
 -- Basic editor setup --
 ------------------------
+
+vim.opt.listchars = { tab = ' ', trail = '·' }
 
 -- Hybrid line numbers
 vim.opt.nu = true

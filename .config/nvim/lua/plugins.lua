@@ -24,7 +24,7 @@ return require('packer').startup(function(use)
   use {
     'kdheepak/tabline.nvim',
     requires = {
-      { 'nvim-tree/nvim-web-devicons' },
+      { 'nvim-tree/nvim-web-devicons', opt = true },
     }
   }
 
@@ -41,6 +41,8 @@ return require('packer').startup(function(use)
   }
 
   use { 'preservim/nerdcommenter' }
+
+  use { 'norcalli/nvim-colorizer.lua' }
 
 
   -----------
