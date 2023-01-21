@@ -10,7 +10,7 @@ vim.opt.termguicolors = true
 -- Catppuccin setup
 require("catppuccin").setup({
   flavour = "mocha",
-  -- transparent_background = true,
+  --transparent_background = true,
 })
 
 -- Lualine setup
@@ -29,8 +29,8 @@ require('tabline').setup({
     colored = true,
     tabline_show_last_separator = true,
     show_filename_only = true,
-    modified_icon = "+ ",
-    modified_italic = true,
+    --modified_icon = "+ ",
+    --modified_italic = true,
     show_tabs_only = false,
   }
 })

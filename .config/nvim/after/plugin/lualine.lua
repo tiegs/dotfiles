@@ -41,9 +41,9 @@ local colors = {
 local theme = {
 	normal = {
 		a = { fg = colors.base, bg = colors.blue },
-		b = { fg = colors.blue, bg = colors.none },
-		c = { fg = colors.base, bg = colors.none },
-		z = { fg = colors.surface0, bg = colors.none },
+		b = { fg = colors.blue, bg = colors.base },
+		c = { fg = colors.base, bg = colors.base },
+		z = { fg = colors.surface0, bg = colors.base },
 	},
 	insert = { a = { fg = colors.base, bg = colors.teal } },
 	visual = { a = { fg = colors.base, bg = colors.mauve } },
