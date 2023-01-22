@@ -10,4 +10,4 @@ require("catppuccin").setup({
 vim.cmd.colorscheme "catppuccin"
 
 
-print("Theme configured!")
+--print("Theme configured!")

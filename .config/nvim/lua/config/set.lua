@@ -65,4 +65,4 @@ vim.opt.mouse=""
 -- Use space as leader key
 --vim.g.mapleader = " "
 
-print("Custom settings loaded!")
+--print("Custom settings loaded!")

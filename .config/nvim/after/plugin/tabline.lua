@@ -17,4 +17,4 @@ require('tabline').setup({
   }
 })
 
-print("Tabline configured")
+--print("Tabline configured")

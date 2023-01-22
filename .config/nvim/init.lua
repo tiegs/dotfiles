@@ -2,4 +2,4 @@ require('config')
 
 require('debug')
 
-print("  Init complete!")
+--print("  Init complete!")

@@ -243,4 +243,4 @@ require('lualine').setup {
 	inactive_winbar = {},
 }
 
-print("Lualine configured!")
+--print("Lualine configured!")

@@ -7,4 +7,4 @@ vim.g.NERDTreeGitStatusUseNerdFonts = 1
 
 vim.g.NERDTreeMinimalUI = 1
 
-print("NERDTree configured!")
+--print("NERDTree configured!")

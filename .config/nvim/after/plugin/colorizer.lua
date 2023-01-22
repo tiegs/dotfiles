@@ -2,4 +2,4 @@
 
 require('colorizer').setup()
 
-print("Colorizer configured!")
+--print("Colorizer configured!")
