@@ -19,6 +19,21 @@ vim.keymap.set("n", "<A-J>", "<C-w>J<CR>")
 vim.keymap.set("n", "<A-K>", "<C-w>K<CR>")
 vim.keymap.set("n", "<A-L>", "<C-w>L<CR>")
 
+-- Move sections in V-mode
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
+-- Keep cursor at first position when using J (using mark 6)
+vim.keymap.set("n", "J", "m6J'6")
+
+-- Keep cursor centered when C-d/u'ing
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
+
+-------------
+-- Plugins --
+-------------
+
 -- NerdTree
 vim.keymap.set("n", "<leader>t", ":NERDTreeToggleVCS<CR>", { silent = true })
 vim.keymap.set("n", "<leader>v", ":NERDTreeFind<CR>", { silent = true })

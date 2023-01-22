@@ -31,13 +31,17 @@ vim.opt.smartcase = true
 -- Make gitgutter responsive
 vim.opt.updatetime = 100
 vim.opt.swapfile = false  -- Disable swapfile - will be written each update else
+
+-- Persistent undo - especially useful for undotree
 vim.opt.undofile = true
 
 ------------------------
 -- Basic editor setup --
 ------------------------
 
+vim.opt.list = true
 vim.opt.listchars = { tab = ' ', trail = '·' }
+
 
 -- Hybrid line numbers
 vim.opt.nu = true
@@ -54,6 +58,9 @@ vim.opt.scrolloff = 5
 
 -- Enable autoindent
 vim.opt.smartindent = true
+
+-- Disable automatic linewrap
+vim.opt.wrap = false
 
 -- Open new splits right and below the current split
 vim.opt.splitright = true
