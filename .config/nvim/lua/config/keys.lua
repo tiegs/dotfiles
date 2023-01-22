@@ -2,6 +2,7 @@
 
 vim.g.mapleader = " "
 
+
 -- Tabline
 vim.keymap.set("n", "<A-n>", ":TablineBufferNext<CR>", { silent = true })
 vim.keymap.set("n", "<A-m>", ":TablineBufferPrevious<CR>", { silent = true })
@@ -21,3 +22,5 @@ vim.keymap.set("n", "<A-L>", "<C-w>L<CR>")
 -- NerdTree
 vim.keymap.set("n", "<leader>t", ":NERDTreeToggleVCS<CR>", { silent = true })
 vim.keymap.set("n", "<leader>v", ":NERDTreeFind<CR>", { silent = true })
+
+print("Keybindings loaded!")

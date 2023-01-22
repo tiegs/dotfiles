@@ -42,7 +42,22 @@ return require('packer').startup(function(use)
 
   use { 'preservim/nerdcommenter' }
 
+  -- Colorcodes are highlighted accordingly
   use { 'norcalli/nvim-colorizer.lua' }
+
+  -- Better undo
+  use('mbbill/undotree')
+
+  -- Better syntax highlighting
+  use {'nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' }}
+
+  ---------------
+  -- Languages --
+  ---------------
+
+  -- Terraform
+  --use { 'hashivim/vim-terraform', ft = {'tf'}}
+  use { 'hashivim/vim-terraform' }
 
 
   -----------
@@ -55,7 +70,19 @@ return require('packer').startup(function(use)
   -- Autoclose brackets
   use { "rstacruz/vim-closer" }
 
-  -- Neovim icons
+  -- Highlight other occurences of word under cursor
+  use { 'RRethy/vim-illuminate' }
+
+  -- THE vim git plugin
+  use { 'tpope/vim-fugitive' }
+
+  -- Git sign column
+  use { 'airblade/vim-gitgutter' }
+
+  -- ysaw :)
+  use { 'tpope/vim-surround' }
+
+  -- Neovim devicons
   use { 'nvim-tree/nvim-web-devicons' }
 
 end)

@@ -1,3 +1,5 @@
+-- Lualine configuration
+
 local colors = {
 	--red = '#cdd6f4',
 	--grey = '#181825',
@@ -240,3 +242,5 @@ require('lualine').setup {
 	winbar = {},
 	inactive_winbar = {},
 }
+
+print("Lualine configured!")
