@@ -23,4 +23,7 @@ vim.keymap.set("n", "<A-L>", "<C-w>L<CR>")
 vim.keymap.set("n", "<leader>t", ":NERDTreeToggleVCS<CR>", { silent = true })
 vim.keymap.set("n", "<leader>v", ":NERDTreeFind<CR>", { silent = true })
 
+-- Undotree
+vim.keymap.set("n", "<leader>u", ":UndotreeToggle<CR>")
+
 print("Keybindings loaded!")

@@ -31,6 +31,7 @@ vim.opt.smartcase = true
 -- Make gitgutter responsive
 vim.opt.updatetime = 100
 vim.opt.swapfile = false  -- Disable swapfile - will be written each update else
+vim.opt.undofile = true
 
 ------------------------
 -- Basic editor setup --

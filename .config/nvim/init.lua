@@ -1,7 +1,5 @@
 require('config')
 
-------------
--- Themes --
-------------
+require('debug')
 
-print("Init complete!")
+print("  Init complete!")
