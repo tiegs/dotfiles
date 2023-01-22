@@ -24,6 +24,9 @@ vim.keymap.set("n", "<leader>t", ":NERDTreeToggleVCS<CR>", { silent = true })
 vim.keymap.set("n", "<leader>v", ":NERDTreeFind<CR>", { silent = true })
 
 -- Undotree
-vim.keymap.set("n", "<leader>u", ":UndotreeToggle<CR>")
+vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle )
+
+-- Git fugitive
+vim.keymap.set("n", "<leader>gs", vim.cmd.Git )
 
 print("Keybindings loaded!")
