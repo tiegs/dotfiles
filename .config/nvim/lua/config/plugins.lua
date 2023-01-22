@@ -32,7 +32,7 @@ return require('packer').startup(function(use)
   -------------------
   -- Functionality --
   -------------------
-  use { 
+  use {
     'preservim/nerdtree',
     requires = {
       { 'Xuyuanp/nerdtree-git-plugin' },
@@ -81,6 +81,14 @@ return require('packer').startup(function(use)
     }
   }
 
+  -- Vimspector
+  use {
+    'puremourning/vimspector',
+    setup = function()
+      vim.g.vimspector_enable_mappings = 'HUMAN'
+    end
+  }
+
   ---------------
   -- Languages --
   ---------------
@@ -93,7 +101,7 @@ return require('packer').startup(function(use)
   -----------
   -- Utils --
   -----------
- 
+
   -- Automatically insert end-keywords
   use { "tpope/vim-endwise" }
 

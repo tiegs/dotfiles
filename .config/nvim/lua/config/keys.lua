@@ -52,5 +52,22 @@ vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
+-- Vimspector
+--vim.keymap.set('n', '<leader>vG', "<cmd>lua require('config.vimspector').generate_debug_profile()<cr>", {"Generate Debug Profile"})
+--vim.keymap.set('n', '<leader>vI', "<cmd>VimspectorInstall<CR>", {})
+
+vim.keymap.set('n', '<leader>dd', "<cmd>call vimspector#Launch()<CR>", {})
+vim.keymap.set('n', '<leader>dq', "<cmd>call vimspector#Reset()<CR>", {})
+vim.keymap.set('n', '<leader>dc', "<cmd>call vimspector#Continue()<CR>", {})
+
+vim.keymap.set('n', '<leader>dt', "<cmd>call vimspector#ToggleBreakpoint()<CR>", {})
+vim.keymap.set('n', '<leader>dT', "<cmd>call vimspector#ClearBreakpoints()<CR>", {})
+
+vim.keymap.set('n', '<leader>dk', "<Plug>VimspectorRestart", {})
+vim.keymap.set('n', '<leader>dh', "<Plug>VimspectorStepOut", {})
+vim.keymap.set('n', '<leader>dl', "<Plug>VimspectorStepInto", {})
+vim.keymap.set('n', '<leader>dj', "<Plug>VimspectorStepOver", {})
+
+--vim.keymap.set('n', '<leader>di', "<Plug>VimspectorBalloonEval", {})
 
 --print("Keybindings loaded!")
