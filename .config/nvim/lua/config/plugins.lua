@@ -57,6 +57,9 @@ return require('packer').startup(function(use)
     requires = { {'nvim-lua/plenary.nvim'} }
   }
 
+  -- tmux integration
+  use { 'christoomey/vim-tmux-navigator' }
+
   -- LSP
   use {
     'VonHeikemen/lsp-zero.nvim',

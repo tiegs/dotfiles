@@ -8,16 +8,16 @@ vim.keymap.set("n", "<A-n>", ":TablineBufferNext<CR>", { silent = true })
 vim.keymap.set("n", "<A-m>", ":TablineBufferPrevious<CR>", { silent = true })
 
 -- Navigate between splits
-vim.keymap.set("n", "<A-h>", "<C-w>h<CR>")
-vim.keymap.set("n", "<A-j>", "<C-w>j<CR>")
-vim.keymap.set("n", "<A-k>", "<C-w>k<CR>")
-vim.keymap.set("n", "<A-l>", "<C-w>l<CR>")
+vim.keymap.set("n", "<A-h>", "<C-w>h")
+vim.keymap.set("n", "<A-j>", "<C-w>j")
+vim.keymap.set("n", "<A-k>", "<C-w>k")
+vim.keymap.set("n", "<A-l>", "<C-w>l")
 
 -- Move splits
-vim.keymap.set("n", "<A-H>", "<C-w>H<CR>")
-vim.keymap.set("n", "<A-J>", "<C-w>J<CR>")
-vim.keymap.set("n", "<A-K>", "<C-w>K<CR>")
-vim.keymap.set("n", "<A-L>", "<C-w>L<CR>")
+vim.keymap.set("n", "<A-H>", "<C-w>H")
+vim.keymap.set("n", "<A-J>", "<C-w>J")
+vim.keymap.set("n", "<A-K>", "<C-w>K")
+vim.keymap.set("n", "<A-L>", "<C-w>L")
 
 -- Move sections in V-mode
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
