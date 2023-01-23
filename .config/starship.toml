@@ -19,6 +19,12 @@ disabled = false
 [terraform]
 symbol = " "
 
+[lua]
+symbol = " "
+
+[python]
+symbol = " "
+
 [time]
 disabled = false
 format = '[$time]($style)'
