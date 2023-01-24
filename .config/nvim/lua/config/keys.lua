@@ -8,10 +8,17 @@ vim.keymap.set("n", "<A-n>", ":TablineBufferNext<CR>", { silent = true })
 vim.keymap.set("n", "<A-m>", ":TablineBufferPrevious<CR>", { silent = true })
 
 -- Navigate between splits
-vim.keymap.set("n", "<A-h>", "<C-w>h")
-vim.keymap.set("n", "<A-j>", "<C-w>j")
-vim.keymap.set("n", "<A-k>", "<C-w>k")
-vim.keymap.set("n", "<A-l>", "<C-w>l")
+--vim.keymap.set("n", "<A-h>", "<C-w>h")
+--vim.keymap.set("n", "<A-j>", "<C-w>j")
+--vim.keymap.set("n", "<A-k>", "<C-w>k")
+--vim.keymap.set("n", "<A-l>", "<C-w>l")
+
+-- Navigate between splits (tmux-integration)
+vim.keymap.set("", "<A-h>", ":<C-U>TmuxNavigateLeft<cr>", { silent = true, noremap = true })
+vim.keymap.set("", "<A-j>", ":<C-U>TmuxNavigateDown<cr>", { silent = true, noremap = true })
+vim.keymap.set("", "<A-k>", ":<C-U>TmuxNavigateUp<cr>", { silent = true, noremap = true })
+vim.keymap.set("", "<A-l>", ":<C-U>TmuxNavigateRight<cr>", { silent = true, noremap = true })
+vim.keymap.set("", "<A-/>", ":<C-U>TmuxNavigatePrevious<cr>", { silent = true, noremap = true })
 
 -- Move splits
 vim.keymap.set("n", "<A-H>", "<C-w>H")

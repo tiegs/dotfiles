@@ -58,7 +58,12 @@ return require('packer').startup(function(use)
   }
 
   -- tmux integration
-  use { 'christoomey/vim-tmux-navigator' }
+  use {
+    'christoomey/vim-tmux-navigator',
+    setup = function()
+      vim.g.tmux_navigator_no_mappings = 1
+    end
+  }
 
   -- LSP
   use {
