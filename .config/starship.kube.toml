@@ -17,7 +17,7 @@ disabled = false
 disabled = false
 
 [kubernetes]
-disabled = true
+disabled = false
 style = "blue bold"
 
 [memory_usage]
