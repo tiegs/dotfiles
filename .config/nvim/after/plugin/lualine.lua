@@ -68,6 +68,14 @@ local space = {
 	color = { bg = colors.black, fg = colors.blue },
 }
 
+local wc = {
+  function()
+    return string.format(" %d", vim.fn.virtcol('.'))
+  end,
+	color = { bg = colors.sapphire, fg = colors.base },
+	separator = { left = "", right = "" },
+}
+
 local filename = {
 	'filename',
 	color = { bg = colors.blue, fg = colors.base },
@@ -206,6 +214,8 @@ require('lualine').setup {
 			space,
 		},
 		lualine_y = {
+			wc,
+			space,
 			encoding,
 			fileformat,
 			space,
