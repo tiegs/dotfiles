@@ -7,10 +7,10 @@ $character"""
 #add_newline=false
 
 #[character]
-#error_symbol = "[✗](bold red)"
+#error_symbol = "[$status ✗](bold red)"
 
-[status]
-disabled = false
+#[status]
+#disabled = false
 #format = '[\[$status - $common_meaning\]](green)'
 
 [sudo]

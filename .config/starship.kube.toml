@@ -9,12 +9,16 @@ $character"""
 #[character]
 #error_symbol = "[✗](bold red)"
 
-[status]
-disabled = false
+#[status]
+#disabled = false
 #format = '[\[$status - $common_meaning\]](green)'
 
 [sudo]
 disabled = false
+
+#[env_var.DIRENV_DIR]
+#disabled = false
+#format = ""
 
 [kubernetes]
 disabled = false
