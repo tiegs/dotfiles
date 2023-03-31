@@ -32,6 +32,13 @@ lvim.leader = "space"
 -- override a default keymapping
 -- lvim.keys.normal_mode["<C-q>"] = ":q<cr>" -- or vim.keymap.set("n", "<C-q>", ":q<cr>" )
 
+-- keymappings for vim-tmux-navigator
+lvim.keys.normal_mode["<C-h>"] = ":<C-U>TmuxNavigateLeft<cr>"
+lvim.keys.normal_mode["<C-j>"] = ":<C-U>TmuxNavigateDown<cr>"
+lvim.keys.normal_mode["<C-k>"] = ":<C-U>TmuxNavigateUp<cr>"
+lvim.keys.normal_mode["<C-l>"] = ":<C-U>TmuxNavigateRight<cr>"
+lvim.keys.normal_mode["<C-/>"] = ":<C-U>TmuxNavigatePrevious<cr>"
+
 lvim.builtin.which_key.mappings["P"] = {
   name = "Python",
   i = { "<cmd>lua require('swenv.api').pick_venv()<cr>", "Pick Env" },
@@ -185,6 +192,7 @@ lvim.plugins = {
 
   "catppuccin/nvim",
 
+  "christoomey/vim-tmux-navigator"
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
