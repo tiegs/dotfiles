@@ -61,7 +61,7 @@ return require('packer').startup(function(use)
   use {
     'christoomey/vim-tmux-navigator',
     setup = function()
-      vim.g.tmux_navigator_no_mappings = 1
+      --vim.g.tmux_navigator_no_mappings = 1
     end
   }
 

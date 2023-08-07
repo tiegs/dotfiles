@@ -26,6 +26,17 @@ vim.keymap.set("n", "<A-J>", "<C-w>J")
 vim.keymap.set("n", "<A-K>", "<C-w>K")
 vim.keymap.set("n", "<A-L>", "<C-w>L")
 
+-- Resize splits
+vim.keymap.set("n", "<A-left>" , ":vertical resize -10<cr>")
+vim.keymap.set("n", "<A-down>" , ":resize -10<cr>")
+vim.keymap.set("n", "<A-up>"   , ":resize +10<cr>")
+vim.keymap.set("n", "<A-right>",  ":vertical resize +10<cr>")
+
+--vim.keymap.set("n", "<C-H>", "<C-w>H")
+--vim.keymap.set("n", "<C-J>", "<C-w>J")
+--vim.keymap.set("n", "<C-K>", "<C-w>K")
+--vim.keymap.set("n", "<C-L>", "<C-w>L")
+
 -- Move sections in V-mode
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
