@@ -23,10 +23,10 @@
   "pulseaudio": {
     "scroll-step": 5, // %, can be a float
     "format": "<span color=\"#7aa2f7\">{icon} </span>{volume}%",
-    "format-muted": "<span color=\"#f7768e\"> </span>Muted",
+    "format-muted": "<span color=\"#f7768e\">󰖁 </span>Muted",
     "format-icons": [
-      "",
       "",
+      "",
       ""
     ],
     "on-click": "pavucontrol"
@@ -60,5 +60,9 @@
       "paused": "",
       "playing": ""
     }
+  },
+  "custom/power": {
+    "format": "<span color=\"#f7768e\">󰐥 </span>",
+    "on-click": "swaynag -t hypr-shutdown -m 'Are you sure you want to shutdown your device?' -b 'Poweroff' 'poweroff'"
   }
 }
