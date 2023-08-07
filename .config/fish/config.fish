@@ -17,3 +17,5 @@ if status is-interactive
 
 end
 #status --is-login; and status --is-interactive; and exec byobu-launcher
+
+fish_add_path ~/.local/bin
