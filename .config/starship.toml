@@ -29,8 +29,8 @@ symbol = " "
 [lua]
 symbol = " "
 
-[python]
-symbol = " "
+#[python]
+#symbol = " "
 
 [time]
 disabled = false
