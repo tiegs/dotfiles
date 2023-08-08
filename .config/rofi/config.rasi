@@ -1,3 +1,5 @@
+// Based on https://github.com/catppuccin/rofi
+
 configuration{
     modi: "drun,ssh,window,run";
     //icon-theme: "Oranchelo";
@@ -8,14 +10,13 @@ configuration{
     location: 0;
     disable-history: false;
     hide-scrollbar: true;
-    display-drun: "   Apps ";
+    display-drun: " 󰀘  Apps ";
     display-run: "   Run ";
-    display-window: " 﩯  Window";
+    display-window: "   Window";
     //display-ssh: " 󰤨  Network";
-    display-ssh: " 撚  SSH";
+    display-ssh: " 󰒍  SSH";
     sidebar-mode: true;
 }
 
 //@theme "catppuccin-macchiato"
 @theme "catppuccin-mocha"
-
