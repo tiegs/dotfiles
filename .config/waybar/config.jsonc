@@ -4,7 +4,8 @@
     "height": 36, // Set height to avoid jumping due to active workspace indicator
     "modules-left": [
       "wlr/workspaces",
-      "clock"
+      "clock",
+      "mpris"
       // "mpd"
     ], // Sets modules for the left of the bar
     "modules-center": [
@@ -12,10 +13,12 @@
     ], // Set modules for the center of the bar
     "modules-right": [
       "custom/pacman",
+      "hyprland/language",
       "temperature",
       "cpu",
       "memory",
       "pulseaudio",
+      "tray",
       "custom/power"
     ], // Set modules for the right of the bar
     "include": [
