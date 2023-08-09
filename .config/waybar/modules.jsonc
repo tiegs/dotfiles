@@ -46,7 +46,7 @@
     "format": "<span color=\"#7aa2f7\"> </span>{}",
     "interval": 3600, // Update each hour
     "signal": 1,
-    "on-click": "kitty eos-update"
+    "on-click": "kitty eos-update; read -p 'All done!'"
   },
   "tray": {
     "icon-size": 18,
