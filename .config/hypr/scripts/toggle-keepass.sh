@@ -23,7 +23,7 @@ else
 	# Command to launch Keepass (non-blocking)
 	gtk-launch org.keepassxc.KeePassXC.desktop
 
-	sleep 1
+	sleep .5
 
 	hyprctl dispatch workspace special:keepass
 fi

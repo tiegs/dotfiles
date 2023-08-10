@@ -90,7 +90,7 @@
   },
   "custom/power": {
     "format": "<span color=\"#f7768e\">󰐥 </span>",
-    "on-click": "swaynag -t hypr-shutdown -m 'Are you sure you want to shutdown your device?' -b 'Poweroff' 'poweroff'"
+    "on-click": "swaynag -t hypr-shutdown -m 'Are you sure you want to shutdown your device?' -b 'Poweroff' 'hyprctl dispatch exit'"
   },
   "hyprland/language": {
     "format": "<span color=\"#7aa2f7\">󰌌</span> {}",

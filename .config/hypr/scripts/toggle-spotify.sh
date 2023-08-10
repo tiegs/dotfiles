@@ -23,7 +23,7 @@ else
 	# Command to launch (non-blocking)
 	gtk-launch spotify.desktop
 
-	sleep .25
+	sleep .5
 
 	hyprctl dispatch workspace special:$ws_name
 fi
