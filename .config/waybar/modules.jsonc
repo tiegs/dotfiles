@@ -34,7 +34,16 @@
     "on-click": "pavucontrol"
   },
   "hyprland/window": {
-    "max-length": 48
+    "max-length": 48,
+    "rewrite": {
+      "(.*) — Mozilla Firefox": "󰈹 $1",
+      "fish (.*)": "󰈺 $1",
+      "(.*@.*): (.*)": "󰒍 <span color=\"#ff9e64\">$1</span>: $2",
+      "(n?vim?|nv) (.+) ?(.*)": " $2",
+      "(.*) - (.*) - Obsidian v[1-9\\.]+": "󱉽 $1 - $2"
+      // "(.*) - fish(@byobu)?": "󰈺 $1"
+      // "(.*)@byobu": " $1",
+    }
   },
   "custom/kernel": {
     "exec": "uname -r | cut -d '-' -f1",
@@ -91,6 +100,12 @@
   "custom/power": {
     "format": "<span color=\"#f7768e\">󰐥 </span>",
     "on-click": "swaynag -t hypr-shutdown -m 'Are you sure you want to shutdown your device?' -b 'Poweroff' 'hyprctl dispatch exit'"
+  },
+  "network": {
+    "format-wifi": "<span color=\"#7aa2f7\"></span> {}",
+    "format-ethernet": "<span color=\"#7aa2f7\">󰈁</span> {}",
+    "format-disconnected": "<span color=\"#7aa2f7\">󰈂</span> {}",
+    "on-click": "nm-connection-editor"
   },
   "hyprland/language": {
     "format": "<span color=\"#7aa2f7\">󰌌</span> {}",

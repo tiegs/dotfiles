@@ -2,6 +2,7 @@
 
 configuration{
     modi: "drun,ssh,window,run";
+    //modi: "drun,ssh,run";
     //icon-theme: "Oranchelo";
     icon-theme: "Qogir-dark";
     show-icons: true;
@@ -18,5 +19,5 @@ configuration{
     sidebar-mode: true;
 }
 
-//@theme "catppuccin-macchiato"
-@theme "catppuccin-mocha"
+@theme "catppuccin-macchiato"
+//@theme "catppuccin-mocha"

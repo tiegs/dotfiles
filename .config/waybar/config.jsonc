@@ -16,7 +16,8 @@
       "hyprland/language",
       "temperature",
       "cpu",
-      "memory",
+      // "memory",
+      // "network",
       "pulseaudio",
       "tray",
       "custom/power"
@@ -42,7 +43,8 @@
       "tray",
       "temperature",
       "cpu",
-      "memory",
+      // "memory",
+      // "network",
       "pulseaudio"
     ], // Sets modules for the right of the bar
     "include": [
