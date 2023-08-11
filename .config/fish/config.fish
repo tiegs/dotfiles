@@ -1,4 +1,11 @@
-if status is-interactive
+if status is-login
+    if not set -q $WAYLAND_DISPLAY; and test $XDG_VTNR -eq 1
+        echo "Starting hyprland"
+        Hyprland
+    else
+        # echo "Not starting hyprland"
+    end
+else if status is-interactive
     # Commands to run in interactive sessions can go here
     /usr/bin/neofetch
 
@@ -14,7 +21,6 @@ if status is-interactive
     #  # Run neofetch in each session
     #  /usr/bin/neofetch
     #end
-
 end
 #status --is-login; and status --is-interactive; and exec byobu-launcher
 
