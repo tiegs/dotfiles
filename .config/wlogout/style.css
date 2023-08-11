@@ -20,8 +20,8 @@ button:hover {
 }
 
 button:focus {
-    background-color: #cba6f7;
-    color: #1e1e2e;
+    background-color: #b4befe;
+    color: #000000;
 }
 
 #lock {
