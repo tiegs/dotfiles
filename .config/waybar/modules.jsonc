@@ -160,7 +160,13 @@
     ]
   },
   "custom/icon": {
-    "format": "<span color=\"#7dcfff\"></span>",
-    "tooltip": false
+    // "format": "<span color=\"#7dcfff\"></span>",
+    // "format": "<span color=\"#7aa2f7\"></span>",
+    // "format": "<span color=\"#bb9af7\"></span>",
+    "format": "<span color=\"#7dcfff\"></span>",
+    "tooltip": true,
+    "return-type": "json",
+    "exec": "echo '{\"tooltip\":\"I use arch BTW\"}'",
+    "interval": "once"
   }
 }
