@@ -25,7 +25,9 @@
   "pulseaudio": {
     "scroll-step": 5, // %, can be a float
     "format": "<span color=\"#7aa2f7\">{icon} </span>{volume}%",
+    "format-bluetooth": "<span color=\"#7aa2f7\">󰂰 </span>{volume}%",
     "format-muted": "<span color=\"#f7768e\">󰖁 </span>Muted",
+    "reverse-scrolling": true,
     "format-icons": [
       "",
       "",
@@ -70,7 +72,7 @@
     // "format": "{player_icon} {artist} - {title}",
     "format": "{player_icon} {dynamic}",
     // "format": "DEFAULT: {player_icon} {dynamic}",
-    "format-paused": "{player_icon} ",
+    "format-paused": "{player_icon}",
     "player-icons": {
       "spotify": "<span color=\"#1ed761\"></span>",
       "firefox": "<span color=\"#E66000\">󰈹</span>"
@@ -98,7 +100,7 @@
     }
   },
   "custom/power": {
-    "format": "<span color=\"#f7768e\">󰐥 </span>",
+    "format": "<span color=\"#f7768e\">󰐥</span>",
     "on-click": "wlogout"
   },
   "network": {
@@ -113,5 +115,52 @@
     "format-en-intl": "Int",
     "on-click": "hyprctl switchxkblayout keyd-virtual-device next",
     "tooltip-format": "{}"
+  },
+  "backlight": {
+    // "device": "amdgpu_bl1",
+    // "format": " {percent}%"
+    // "scroll-step": 2,
+    "reverse-scrolling": true, // Touchpad uses natural scrolling
+    // "format": "<span color=\"#ff9e64\"></span> {percent}% {icon}",
+    "format": "<span color=\"#ff9e64\"> {icon}</span>",
+    "tooltip-format": "Backlight: {percent}%",
+    "format-icons": [
+      "▁",
+      "▂",
+      "▃",
+      "▄",
+      "▅",
+      "▆",
+      "▇",
+      "█"
+    ]
+  },
+  "battery": {
+    "format": "<span color=\"#9ece6a\">{icon}</span> {capacity}%",
+    "format-plugged": "<span color=\"#7aa2f7\">󰂄</span> {capacity}%",
+    "format-warning": "<span color=\"#ff9e64\">{icon} {time}</span>",
+    "format-critical": "<span color=\"#f7768e\">󰂃 {time}</span>",
+    "tooltip-format": "Battery: {capacity}%\nCurrent Draw: {power}W\n{timeTo}",
+    "states": {
+      "warning": 30,
+      "critical": 10
+    },
+    "format-icons": [
+      "󰂎",
+      "󰁺",
+      "󰁻",
+      "󰁼",
+      "󰁽",
+      "󰁾",
+      "󰁿",
+      "󰂀",
+      "󰂁",
+      "󰂂",
+      "󰁹"
+    ]
+  },
+  "custom/icon": {
+    "format": "<span color=\"#7dcfff\"></span>",
+    "tooltip": false
   }
 }

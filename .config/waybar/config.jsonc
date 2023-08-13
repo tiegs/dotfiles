@@ -1,11 +1,14 @@
 [
   {
     "layer": "top", // Waybar on highest layer so tooltips go over windows
+    "output": "!eDP-1", // All but the integrated display (special bar, configured below)
     "height": 36, // Set height to avoid jumping due to active workspace indicator
     "modules-left": [
+      "custom/icon",
       "wlr/workspaces",
       "clock",
       "mpris"
+      // "custom/kernel"
       // "mpd"
     ], // Sets modules for the left of the bar
     "modules-center": [
@@ -28,11 +31,13 @@
   },
   {
     "layer": "top", // Waybar on highest layer so tooltips go over windows
-    "output": "DP-1", // Set output to secondary monitor
+    "output": "eDP-1", // Only display on integrated display
     "height": 36, // Set height to avoid jumping due to active workspace indicator
     "modules-left": [
+      "custom/icon",
       "wlr/workspaces",
       "clock",
+      "mpris",
       "custom/kernel"
       // "mpd"
     ], // Sets modules for the left of the bar
@@ -40,12 +45,17 @@
       "hyprland/window"
     ], // Sets modules for the center of the bar
     "modules-right": [
-      "tray",
+      "custom/pacman",
+      "hyprland/language",
       "temperature",
+      "backlight",
       "cpu",
       // "memory",
       // "network",
-      "pulseaudio"
+      "pulseaudio",
+      "battery",
+      "tray",
+      "custom/power"
     ], // Sets modules for the right of the bar
     "include": [
       "$HOME/.config/waybar/modules.jsonc"
