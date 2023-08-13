@@ -4,7 +4,7 @@
     "output": "!eDP-1", // All but the integrated display (special bar, configured below)
     "height": 36, // Set height to avoid jumping due to active workspace indicator
     "modules-left": [
-      "custom/icon",
+      // "custom/icon",
       "wlr/workspaces",
       "clock",
       "mpris"
@@ -34,11 +34,11 @@
     "output": "eDP-1", // Only display on integrated display
     "height": 36, // Set height to avoid jumping due to active workspace indicator
     "modules-left": [
-      "custom/icon",
+      // "custom/icon",
       "wlr/workspaces",
       "clock",
-      "mpris",
-      "custom/kernel"
+      "mpris"
+      // "custom/kernel"
       // "mpd"
     ], // Sets modules for the left of the bar
     "modules-center": [
