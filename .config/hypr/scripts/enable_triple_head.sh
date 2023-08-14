@@ -22,4 +22,5 @@ hyprctl keyword monitor $screen_right,2560x1440,4480x0,1 # Dell right
 sleep 1                                                  # Wait for 1 sec for the resolution to settle
 hyprctl keyword monitor $screen_mid,2560x1440,1920x0,1   # Acer
 
+echo "Disable mobile screen"
 hyprctl keyword monitor eDP-1,disable
