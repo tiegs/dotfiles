@@ -1,11 +1,10 @@
 screenshots
 clock
 
-fade-in=0.5
+fade-in=3
 
-grace=0
-grace-no-mouse
-grace-no-touch
+grace=3
+indicator-idle-visible
 
 indicator
 indicator-radius=100
