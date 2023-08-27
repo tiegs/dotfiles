@@ -104,9 +104,10 @@ tooltip {
   margin-left: 4px;
 }
 
+
 #tray {
   border-radius: 8px;
-  margin-left: 10px;
+  margin: 3px 5px;
 }
 
 #window {
@@ -119,36 +120,41 @@ tooltip {
 }
 
 #mpris {
-  /* padding-right: 4px; */
   background: rgba(21, 22, 30, 0.7);
   border-radius: 8px;
   padding: 0 10px;
-  /* padding-left: 100px; */
-  /* margin-left: 5px; */
   margin: 3px 5px;
-  /* margin: 3px 0; */
   border: 0;
 }
 
-/* Rounding only on right of module(s) */
-#custom-pacman,
+#custom-pacman {
+  border-radius: 8px;
+}
 
 #custom-kernel {
   border-radius: 0 8px 8px 0;
 }
 
-#temperature {
+#temperature, #backlight {
   background: rgba(21, 22, 30, 0.7);
   padding: 0 5px 0 10px;
   margin: 3px 0 3px 5px;
   border-radius: 8px 0 0 8px;
 }
 
-#cpu {
+#cpu, #battery {
   background: rgba(21, 22, 30, 0.7);
   padding: 0 10px 0 5px;
   margin: 3px 5px 3px 0;
   border-radius: 0 8px 8px 0;
+}
+
+#battery.warning {
+  background: #ff9e64;
+}
+
+#battery.critical {
+  background: #f7768e;
 }
 
 #language {

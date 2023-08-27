@@ -48,12 +48,12 @@
       "custom/pacman",
       "hyprland/language",
       "temperature",
-      "backlight",
       "cpu",
+      "backlight",
+      "battery",
       // "memory",
       // "network",
       "pulseaudio",
-      "battery",
       "tray",
       "custom/power"
     ], // Sets modules for the right of the bar

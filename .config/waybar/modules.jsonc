@@ -24,9 +24,10 @@
   },
   "pulseaudio": {
     "scroll-step": 5, // %, can be a float
-    "format": "<span color=\"#7aa2f7\">{icon} </span>{volume}%",
-    "format-bluetooth": "<span color=\"#7aa2f7\">󰂰 </span>{volume}%",
-    "format-muted": "<span color=\"#f7768e\">󰖁 </span>Muted",
+    "format": "<span color=\"#7aa2f7\">{icon}</span>",
+    "format-bluetooth": "<span color=\"#7aa2f7\">󰂰</span>",
+    "format-muted": "<span color=\"#f7768e\">󰖁</span>Muted",
+    "tooltip-format": "{desc} [{volume}%]",
     "reverse-scrolling": true,
     "format-icons": [
       "",
@@ -122,7 +123,7 @@
     // "scroll-step": 2,
     "reverse-scrolling": true, // Touchpad uses natural scrolling
     // "format": "<span color=\"#ff9e64\"></span> {percent}% {icon}",
-    "format": "<span color=\"#ff9e64\"> {icon}</span>",
+    "format": "<span color=\"#7aa2f7\"> {icon}</span>",
     "tooltip-format": "Backlight: {percent}%",
     "format-icons": [
       "▁",
