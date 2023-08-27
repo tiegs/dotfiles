@@ -5,9 +5,25 @@
   color: #c0caf5;
 }
 
+/* Padding is incl. background */
+/* Margin is space between elements */
+
 /* Set background color of main waybar window */
 window#waybar {
   background: rgba(21, 22, 30, 0.5);
+  transition: background .5s;
+}
+
+window#waybar.empty {
+  background: rgba(21, 22, 30, 0);
+}
+
+window#waybar.solo {
+  background: rgba(21, 22, 30, 1);
+}
+
+window#waybar.hidden {
+  background: rgba(247, 118, 142, 0.5); /* -> #f7768e */
 }
 
 /* Set background color of tooltips */
@@ -16,8 +32,17 @@ tooltip {
 }
 
 /* Set workspace text color and padding */
+#workspaces {
+  margin: 3px 0;
+  /* margin-left: 0px; */
+  /* margin-right: 0px; */
+  padding-left: 0px;
+  padding-right: 0px;
+}
 #workspaces button {
   padding: 0;
+  margin-bottom: 2px;
+  border-bottom: 2px;
 }
 
 /* Sets active workspace to have a solid line on the bottom */
@@ -45,13 +70,18 @@ tooltip {
 #custom-kernel,
 #custom-pacman,
 #workspaces,
-#clock,
 #window,
-#temperature,
-#cpu,
 #memory,
 #pulseaudio,
 #tray,
+
+#clock {
+  border-radius: 8px;
+  background: rgba(21, 22, 30, 0.7);
+  margin: 3px 3px;
+  padding: 0 10px;
+}
+
 #mpd {
   background: rgba(21, 22, 30, 0.7);
   padding: 0 10px;
@@ -59,9 +89,14 @@ tooltip {
   border: 0;
 }
 
+#window {
+  background: rgba(0, 0, 0, 0);
+}
+
 #window.empty {
   background: rgba(0, 0, 0, 0);
 }
+
 
 /* Set up rounding to make these modules look like separate pills */
 #mpd {
@@ -71,7 +106,7 @@ tooltip {
 
 #tray {
   border-radius: 8px;
-  margin-right: 4px;
+  margin-left: 10px;
 }
 
 #window {
@@ -84,17 +119,52 @@ tooltip {
 }
 
 #mpris {
-  padding-right: 4px;
+  /* padding-right: 4px; */
+  background: rgba(21, 22, 30, 0.7);
+  border-radius: 8px;
+  padding: 0 10px;
+  /* padding-left: 100px; */
+  /* margin-left: 5px; */
+  margin: 3px 5px;
+  /* margin: 3px 0; */
+  border: 0;
 }
 
 /* Rounding only on right of module(s) */
 #custom-pacman,
+
 #custom-kernel {
   border-radius: 0 8px 8px 0;
 }
-#custom-power {
-  padding-right: 12px;
+
+#temperature {
+  background: rgba(21, 22, 30, 0.7);
+  padding: 0 5px 0 10px;
+  margin: 3px 0 3px 5px;
+  border-radius: 8px 0 0 8px;
 }
+
+#cpu {
+  background: rgba(21, 22, 30, 0.7);
+  padding: 0 10px 0 5px;
+  margin: 3px 5px 3px 0;
+  border-radius: 0 8px 8px 0;
+}
+
+#language {
+  background: rgba(21, 22, 30, 0.7);
+  border-radius: 8px;
+  margin: 3px 5px;
+  padding: 0 10px;
+}
+
+#custom-power {
+  background: rgba(21, 22, 30, 0.7);
+  border-radius: 8px;
+  margin: 3px 5px;
+  padding: 0 10px;
+}
+
 #custom-icon {
   padding-left: 12px;
   padding-right: 4px;
