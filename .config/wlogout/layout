@@ -13,8 +13,8 @@
 {
     "label" : "shutdown",
     "action" : "systemctl poweroff",
-    "text" : "(S)hutdown",
-    "keybind" : "s"
+    "text" : "Shutdown (X)",
+    "keybind" : "x"
 }
 {
     "label" : "logout",
@@ -25,6 +25,12 @@
 {
     "label" : "suspend",
     "action" : "systemctl suspend",
-    "text" : "S(u)spend",
-    "keybind" : "u"
+    "text" : "(S)uspend",
+    "keybind" : "s"
+}
+{
+    "label" : "hibernate",
+    "action" : "systemctl hibernate",
+    "text" : "(H)ibernate",
+    "keybind" : "h"
 }
