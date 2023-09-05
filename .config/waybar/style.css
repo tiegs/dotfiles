@@ -171,6 +171,13 @@ tooltip {
   padding: 0 10px;
 }
 
+#custom-tailscale {
+  background: rgba(21, 22, 30, 0.7);
+  border-radius: 8px;
+  margin: 3px 5px;
+  padding: 0 10px;
+}
+
 #custom-icon {
   padding-left: 12px;
   padding-right: 4px;

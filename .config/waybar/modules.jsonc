@@ -53,6 +53,18 @@
     "interval": "once",
     "format": "<span color=\"#7aa2f7\"> </span>{}"
   },
+  "custom/tailscale": {
+    "exec": "$HOME/.config/waybar/scripts/tailscale.sh",
+    "format": "{icon}",
+    "interval": 10,
+    "format-icons": {
+      "stopped": "<span color=\"#7aa2f7\"></span>",
+      "disconnected": "<span color=\"#7aa2f7\">󰌙</span>",
+      "connected": "<span color=\"#7aa2f7\">󱊪</span>",
+      "tunneled": "<span color=\"#9ece6a\">󰦝</span>"
+    },
+    "return-type": "json"
+  },
   "custom/pacman": {
     "exec": "$HOME/.config/waybar/scripts/package-updates.sh",
     "format": "<span color=\"#7aa2f7\"> </span>{}",

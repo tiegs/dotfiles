@@ -21,6 +21,7 @@
       "cpu",
       // "memory",
       // "network",
+      "custom/tailscale",
       "pulseaudio",
       "tray",
       "custom/power"
@@ -49,10 +50,11 @@
       "hyprland/language",
       "temperature",
       "cpu",
-      "backlight",
+      // "backlight",
       "battery",
       // "memory",
       // "network",
+      "custom/tailscale",
       "pulseaudio",
       "tray",
       "custom/power"
