@@ -5,7 +5,8 @@
     "height": 36, // Set height to avoid jumping due to active workspace indicator
     "modules-left": [
       // "custom/icon",
-      "wlr/workspaces",
+      // "wlr/workspaces",
+      "hyprland/workspaces",
       "clock",
       "mpris"
       // "custom/kernel"
@@ -36,7 +37,8 @@
     "height": 36, // Set height to avoid jumping due to active workspace indicator
     "modules-left": [
       // "custom/icon",
-      "wlr/workspaces",
+      // "wlr/workspaces",
+      "hyprland/workspaces",
       "clock",
       "mpris"
       // "custom/kernel"

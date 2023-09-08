@@ -76,10 +76,6 @@
     "icon-size": 18,
     "spacing": 8
   },
-  "wlr/workspaces": {
-    "disable-scroll": true,
-    "on-click": "activate"
-  },
   "mpris": {
     // "format": "<span color=\"#7aa2f7\">{status_icon} </span>{artist} - {title}",
     // "format": "{player_icon} {artist} - {title}",
