@@ -83,7 +83,8 @@
       "connected": "<span color=\"#7aa2f7\">󱊪</span>",
       "tunneled": "<span color=\"#9ece6a\">󰦝</span>"
     },
-    "return-type": "json"
+    "return-type": "json",
+    "signal": 7
   },
   "custom/pacman": {
     "exec": "$HOME/.config/waybar/scripts/package-updates.sh",
@@ -165,10 +166,11 @@
     ]
   },
   "battery": {
-    "format": "<span color=\"#9ece6a\">{icon}</span> {capacity}%",
-    "format-plugged": "<span color=\"#7aa2f7\">󰂄</span> {capacity}%",
-    "format-warning": "<span color=\"#ff9e64\">{icon} {time}</span>",
-    "format-critical": "<span color=\"#f7768e\">󰂃 {time}</span>",
+    "format": "<span color=\"#7aa2f7\">{icon}</span> {capacity}%",
+    "format-plugged": "<span color=\"#9ece6a\">󰂄</span> {capacity}%",
+    "format-charging": "<span color=\"#9ece6a\">󰂄</span> {capacity}%",
+    "format-warning": "<span color=\"#1a1b26\">{icon} {time}</span>",
+    "format-critical": "<span color=\"#1a1b26\">󰂃 {time}</span>",
     "tooltip-format": "Battery: {capacity}%\nCurrent Draw: {power}W\n{timeTo}",
     "states": {
       "warning": 30,
