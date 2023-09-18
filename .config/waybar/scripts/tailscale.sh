@@ -6,6 +6,9 @@ jq_bin="/usr/bin/jq -r"
 status=$($ts_bin status --self --peers=false --json)
 # echo $status
 
+status_txt=$($ts_bin status --peers=false)
+# printf "%q" "$status_txt"
+
 svc_state=$(echo $status | $jq_bin ".BackendState")
 # echo $svc_state
 
@@ -35,4 +38,4 @@ else
 	alt="stopped"
 fi
 
-echo "{\"text\": \"tailscale dummy text\", \"alt\": \"$alt\", \"tooltip\": \"tailscale tooltip $alt\", \"class\": \"$alt\"}"
+echo "{\"text\": \"tailscale dummy text\", \"alt\": \"$alt\", \"tooltip\": \"tailscale status: $alt\", \"class\": \"$alt\"}"
