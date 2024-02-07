@@ -2,7 +2,7 @@ return {
   "neovim/nvim-lspconfig",
   ---@class PluginLspOpts
   opts = {
-    autoformat = false,
+    -- autoformat = false,  # deprecated
     servers = {
       -- pyright = false,
 
